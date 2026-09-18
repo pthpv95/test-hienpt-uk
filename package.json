@@ -4,9 +4,13 @@
   "description": "Minimal Node app for Coolify deployment",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "db:init": "node scripts/init-db.js"
   },
   "engines": {
     "node": "20.x"
+  },
+  "dependencies": {
+    "pg": "^8.23.0"
   }
 }
