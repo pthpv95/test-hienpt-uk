@@ -12,7 +12,7 @@ const server = http.createServer(async (req, res) => {
   if (req.url === '/health') {
     try {
       const { rows } = await db.query('SELECT now() AS db_time');
-      respond(200, { status: 'ok', db_time: rows[0].db_time, tm: 123 });
+      respond(200, { status: 'ok2', db_time: rows[0].db_time, tm: 123 });
     } catch (err) {
       respond(500, { status: 'error', message: err.message });
     }
